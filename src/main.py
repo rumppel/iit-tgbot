@@ -51,7 +51,7 @@ def echo(update: Update, context: CallbackContext) -> None:
 def main() -> None:
     """Start the bot."""
     # Create the Updater and pass it your bot's token.
-    updater = Updater(os.environ.get("TOKEN", '6284576779:AAHmBeDt1gjzlGArVmi1zVQxi96QdmObMtI'))
+    updater = Updater(os.environ.get("TOKEN", 'PUT_YOUR_TOKEN_HERE'))
 
     # Get the dispatcher to register handlers
     dispatcher = updater.dispatcher
