@@ -51,7 +51,7 @@ def echo(update: Update, context: CallbackContext) -> None:
 def main() -> None:
     """Start the bot."""
     # Create the Updater and pass it your bot's token.
-    updater = Updater(os.environ.get("TOKEN", 'PUT_YOUR_TOKEN_HERE'))
+    updater = Updater(os.environ.get("TOKEN", '6284576779:AAFiz3rRknWWfTCZXyfIugtGELJ2iLFK270'))
 
     # Get the dispatcher to register handlers
     dispatcher = updater.dispatcher
@@ -61,7 +61,7 @@ def main() -> None:
     dispatcher.add_handler(CommandHandler("help", help_command))
 
     # on non command i.e message - echo the message on Telegram
-    dispatcher.add_handler(MessageHandler(Filters.text & ~Filters.command, echo))
+    dispatcher.add_handler(MessageHandler(filters.text & ~filters.command, echo))
 
     # Start the Bot
     updater.start_polling()
